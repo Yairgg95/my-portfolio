@@ -2,3 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
+.profile-container::before {
+    content: "";
+    position: absolute;
+    width: 110%;
+    height: 110%;
+    border-radius: 50%;
+    border: 10px solid transparent;
+    background: conic-gradient(
+        rgba(0, 123, 255, 0) 0deg,
+        rgba(0, 123, 255, 1) 15deg,
+        rgba(111, 66, 193, 1) 30deg,
+        rgba(0, 123, 255, 1) 45deg,
+        rgba(111, 66, 193, 1) 60deg,
+        rgba(0, 123, 255, 1) 75deg,
+        rgba(111, 66, 193, 1) 90deg,
+        rgba(0, 123, 255, 0) 120deg
+    );
+    mask: conic-gradient(
+        rgba(255, 255, 255, 0) 0deg,
+        rgba(255, 255, 255, 1) 60deg,
+        rgba(255, 255, 255, 0) 70deg
+    );
+    animation: glowing-border 5s linear infinite;
+}
+
+@keyframes glowing-border {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

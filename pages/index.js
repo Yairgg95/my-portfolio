@@ -34,7 +34,7 @@ export default function Home() {
   return (
     <>
       <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
-      <main className={clsx("transition-opacity duration-1000", isLoaded ? "opacity-100" : "opacity-0")}>
+      <main className={clsx("transition-opacity duration-1000 px-8", isLoaded ? "opacity-100" : "opacity-0")}>
         <AboutMe />
       </main>
       <footer className="h-16 border-t-2 border-[#163874]"></footer>
