@@ -57,12 +57,14 @@ export default function AboutMe() {
         <div className="flex space-x-4 mt-4">
           <a
             href="https://github.com/Yairgg95"
+            target="_blank"
             className="text-gray-800 dark:text-white"
           >
             <Github size={iconSize} className="hover:text-[#025CF7]" />
           </a>
           <a
             href="https://www.linkedin.com/in/yair-guadarrama-gg95"
+            target="_blank"
             className="text-gray-800 dark:text-white "
           >
             <Linkedin size={iconSize} className="hover:text-[#025CF7]" />

@@ -23,13 +23,13 @@ export default function Navbar({ darkMode, setDarkMode }) {
 
   return (
     <nav className="bg-[#E8EEF8] dark:bg-black flex justify-between  items-center px-4 sticky top-0 w-full shadow-md h-16 border-b-2 border-[#163874] z-50">
-      <div className="h-10">
+      <a href="/" className="h-10 md:h-14 lg:h-16">
         <img
           src="/assets/YairG-logo.png"
           alt="YairG-logo"
           className="h-full w-auto object-contain"
         />
-      </div>
+      </a>
       <ul className="hidden lg:flex items-center space-x-4 h-full">
         {menuItems.map((item) => (
           <li key={item.name}>

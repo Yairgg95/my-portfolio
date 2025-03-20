@@ -41,6 +41,11 @@ export default function Resume() {
       logo: "https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg",
     },
     {
+      name: "GitHub",
+      url: "https://github.com",
+      logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg",
+    },
+    {
       name: "HTML5",
       url: "https://www.w3.org/html/",
       logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg",
@@ -113,24 +118,39 @@ export default function Resume() {
       provider: "Kodemia",
       year: "2024",
       location: "Mexico City, Mexico",
+      certificateURL:
+        "https://app.openbadges.me/view/#!/badge?badgeid=62a25ace-463c-492e-8fa3-8f54c46fa383",
     },
     {
       title: "Scrum Fundamentals Certified (SFC™)",
       provider: "SCRUMstudy",
       year: "2024",
       location: "Mexico City, Mexico",
+      certificateURL:
+        "https://c46e136a583f7e334124-ac22991740ab4ff17e21daf2ed577041.ssl.cf1.rackcdn.com/Certificate/ScrumFundamentalsCertified-YairGodofredoGuadarramaGonzaga-1023249.pdf",
     },
     {
       title: "Google Cloud Essentials",
       provider: "Google",
       year: "2024",
       location: "Mexico City, Mexico",
+      certificateURL:
+        "https://www.cloudskillsboost.google/public_profiles/7c779784-d573-4b01-a4d4-dfda88d7df3a/badges/9936251",
     },
     {
       title: "EF SET English Certificate 62/100 (C1 Advanced)",
       provider: "EF SET",
       year: "2024",
       location: "Mexico City, Mexico",
+      certificateURL: "https://cert.efset.org/en/sfoW7z",
+    },
+    {
+      title: "Introduccion Java (POO)",
+      provider: "Accenture",
+      year: "2025",
+      location: "Mexico City, Mexico",
+      certificateURL:
+        "https://www.linkedin.com/in/yair-guadarrama-gg95/details/certifications/1742011644482/single-media-viewer/?profileId=ACoAAE0e0RYBXQD0gu7GRVvZVZ9Q7WjvE_DZkws",
     },
   ];
   return (
@@ -144,16 +164,16 @@ export default function Resume() {
 
       <div className="flex flex-col md:flex-row gap-4 my-3 md:my-6">
         <a
-          href="/resume.pdf"
-          download="Resume.pdf"
-          className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
+          href="/Resume-2025.pdf"
+          download="Yair-resume.pdf"
+          className="px-6 py-2 bg-blue-600 text-white text-center rounded-lg hover:bg-blue-700 transition"
         >
           Download Resume (EN)
         </a>
         <a
-          href="/cv.pdf"
-          download="CV.pdf"
-          className="px-6 py-2 bg-gray-700 text-white rounded-lg hover:bg-gray-800 transition"
+          href="/CV-2025.pdf"
+          download="Yair-CV.pdf"
+          className="px-6 py-2 bg-gray-700 text-white text-center rounded-lg hover:bg-gray-800 transition"
         >
           Descargar CV (ES)
         </a>
@@ -180,16 +200,20 @@ export default function Resume() {
       </h3>
 
       <div className="w-full max-w-3xl bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-md my-3 md:my-6">
-        
-        <ul className="space-y-4">
+        <ul className="space-y-6">
           {certificates.map((cert, index) => (
-            <li
-              key={index}
-              className="text-gray-700 dark:text-gray-300 text-center"
-            >
-              <strong>{cert.title}</strong> <br />
-              {cert.provider} | {cert.year}, {cert.location}
-            </li>
+            <a href={cert.certificateURL} target="_blank">
+              <li
+                key={index}
+                className="text-gray-700 dark:text-gray-300 text-center my-3"
+              >
+                <strong className="hover:text-blue-700 dark:hover:text-[#6f42c1]">
+                  {cert.title}
+                </strong>{" "}
+                <br />
+                {cert.provider} | {cert.year}, {cert.location}
+              </li>
+            </a>
           ))}
         </ul>
       </div>

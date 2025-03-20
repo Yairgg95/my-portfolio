@@ -4,6 +4,8 @@ import Navbar from "../components/Navbar";
 import AboutMe from "../components/AboutMe";
 import Portfolio from "@/components/Portfolio";
 import Resume from "@/components/Resume";
+import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
@@ -40,8 +42,9 @@ export default function Home() {
         <AboutMe />
         <Portfolio/>
         <Resume/>
+        <Contact/>
       </main>
-      <footer className="h-16 border-t-2 border-[#163874]"></footer>
+      <Footer/>
     </>
   );
 }

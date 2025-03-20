@@ -22,7 +22,7 @@ export default function Contact() {
             contact me via email or WhatsApp.
           </p>
           <a
-            href="yair.g.guadarrama@gmail.com"
+            href="mailto:yair.g.guadarrama@gmail.com"
             className="text-blue-500 hover:underline flex items-center gap-2"
           >
             <Mail /> Send me an email
