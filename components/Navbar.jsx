@@ -22,10 +22,10 @@ export default function Navbar({ darkMode, setDarkMode }) {
   ];
 
   return (
-    <nav className="bg-[#E8EEF8] dark:bg-black flex justify-between  items-center px-4 sticky top-0 w-full shadow-md h-16 border-b-2 border-[#163874] z-50">
+    <nav className="bg-[#E8EEF8] dark:bg-black flex justify-between  items-center px-4 sticky top-0 w-full shadow-md h-16 border-b-2 border-[#163874] dark:border-[#5C92F0] z-50">
       <a href="/" className="h-10 md:h-14 lg:h-16">
         <img
-          src="/assets/YairG-logo.png"
+          src={darkMode ? "/assets/YairG-logo-dark-mode.png" : "/assets/YairG-logo.png"}
           alt="YairG-logo"
           className="h-full w-auto object-contain"
         />
@@ -37,9 +37,9 @@ export default function Navbar({ darkMode, setDarkMode }) {
               href={item.href}
               onClick={() => setActiveLink(item.href)}
               className={clsx(
-                "hover:underline transition-colors",
+                "hover:text-[#6f42c1] dark:hover:text-[#025CF7] font-semibold transition-colors",
                 activeLink === item.href
-                  ? "text-[#025CF7]"
+                  ? "text-[#025CF7] dark:text-[#5C92F0]"
                   : "text-black dark:text-white"
               )}
             >
@@ -48,7 +48,7 @@ export default function Navbar({ darkMode, setDarkMode }) {
           </li>
         ))}
         <li>
-          <button onClick={toggleDarkMode} className="p-2 rounded-full">
+          <button onClick={toggleDarkMode} className="p-2 rounded-full hover:text-[#025CF7] dark:hover:text-yellow-500 hover:scale-110">
             {darkMode ? <Sun size={20} /> : <Moon size={20} />}
           </button>
         </li>

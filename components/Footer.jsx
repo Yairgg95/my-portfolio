@@ -1,10 +1,10 @@
 import { Github, Linkedin, Mail, MessageCircle } from "lucide-react";
-export default function Footer() {
+export default function Footer({darkMode}) {
   return (
-    <footer className="h-16 border-t-2 border-[#163874] flex flex-col items-center pb-8">
+    <footer className="h-16 border-t-2 border-[#163874] dark:border-[#5C92F0] flex flex-col items-center pb-8">
       <a href="/" className="h-16">
         <img
-          src="/assets/YairG-logo.png"
+          src={darkMode ? "/assets/YairG-logo-dark-mode.png" : "/assets/YairG-logo.png"}
           alt="YairG-logo"
           className="h-full w-auto object-contain"
         />

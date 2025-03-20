@@ -44,7 +44,7 @@ export default function Home() {
         <Resume/>
         <Contact/>
       </main>
-      <Footer/>
+      <Footer darkMode={darkMode}/>
     </>
   );
 }
