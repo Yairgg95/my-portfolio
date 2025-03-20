@@ -75,7 +75,7 @@ export default function AboutMe() {
           CONTACT
         </h3>
         <p className="text-gray-700 dark:text-gray-300 mt-4 md:mt-6 text-sm md:text-base lg:text-lg">
-          CDMX, México.
+          CDMX, Mexico.
           <br />
           yair.g.guadarrama@gmail.com
           <br />

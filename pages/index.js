@@ -3,6 +3,7 @@ import clsx from "clsx";
 import Navbar from "../components/Navbar";
 import AboutMe from "../components/AboutMe";
 import Portfolio from "@/components/Portfolio";
+import Resume from "@/components/Resume";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
@@ -38,6 +39,7 @@ export default function Home() {
       <main className={clsx("transition-opacity duration-1000 px-8", isLoaded ? "opacity-100" : "opacity-0")}>
         <AboutMe />
         <Portfolio/>
+        <Resume/>
       </main>
       <footer className="h-16 border-t-2 border-[#163874]"></footer>
     </>

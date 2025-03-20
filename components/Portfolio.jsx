@@ -61,7 +61,7 @@ export default function Portfolio() {
       <h2 className="text-3xl md:text-5xl  text-center font-bold bg-gradient-to-br from-[#007bff] to-[#6f42c1] text-transparent bg-clip-text">
         Portfolio
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full mt-8 md:mt-16 lg:mt-32">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full mt-8 md:mt-16">
         {projects.map((project) => (
           <div
             key={project.id}
