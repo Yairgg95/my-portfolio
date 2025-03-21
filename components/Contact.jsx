@@ -1,20 +1,14 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { showToast } from "./CustomToast";
-import {
-  Mail,
-  Send,
-  MessageCircle,
-  Loader,
-} from "lucide-react";
-
-
+import { Mail, Send, MessageCircle, Loader } from "lucide-react";
 
 export default function Contact() {
   const {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm();
 
   const [isSending, setIsSending] = useState(false);
@@ -33,7 +27,9 @@ export default function Contact() {
         throw new Error("Something went wrong. Please try again.");
       }
 
-      showToast("succes", "Thank you! Your message has been sent.");
+      showToast("success", "Thank you! Your message has been sent.");
+
+      reset();
     } catch (error) {
       showToast("error", error.message || "Failed to send message.");
     } finally {
