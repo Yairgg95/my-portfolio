@@ -61,18 +61,18 @@ export default function Portfolio() {
       <h2 className="text-3xl md:text-5xl  text-center font-bold bg-gradient-to-br from-[#007bff] to-[#6f42c1] text-transparent bg-clip-text">
         Portfolio
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full mt-8 md:mt-16">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 w-full mt-8 md:mt-16">
         {projects.map((project) => (
           <div
             key={project.id}
-            className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden cursor-pointer hover:scale-105 transition-transform"
+            className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden cursor-pointer hover:scale-105 transition-transform flex flex-col max-h-[400px]"
           >
             <img
               src={project.image}
               alt={project.title}
               className="w-full h-40 object-cover"
             />
-            <div className="p-4">
+            <div className="p-4 flex flex-col justify-between flex-grow">
               <h3 className="text-lg font-semibold">{project.title}</h3>
               <p className="text-sm text-gray-600 dark:text-gray-300">
                 {project.description}
