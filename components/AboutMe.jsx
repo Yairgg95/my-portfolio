@@ -23,7 +23,7 @@ export default function AboutMe() {
   return (
     <section
       id="about-me"
-      className="h-full max-w-screen-2xl mx-auto flex flex-col md:flex-row items-center justify-center pt-6 md:pt-2 lg:pt-16"
+      className="h-full max-w-screen-2xl mx-auto flex flex-col md:flex-row items-center justify-center pt-10 md:pt-16 lg:pt-32"
     >
       <div className="text-center md:text-left md:w-1/4 order-2 md:order-1 my-4 md:my-8 lg:mt-12">
         <h3 className="text-lg md:text-xl lg:text-2xl font-semibold text-gray-900 dark:text-white">

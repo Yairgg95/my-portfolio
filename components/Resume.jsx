@@ -156,13 +156,13 @@ export default function Resume() {
   return (
     <section
       id="resume"
-      className="h-full max-w-screen-2xl mx-auto flex flex-col items-center justify-center pt-6 md:pt-2 lg:pt-16"
+      className="h-full max-w-screen-2xl mx-auto flex flex-col items-center justify-center pt-20 md:pt-24 lg:pt-36"
     >
       <h2 className="text-3xl md:text-5xl  text-center font-bold bg-gradient-to-br from-[#007bff] to-[#6f42c1] text-transparent bg-clip-text">
         Resume
       </h2>
 
-      <div className="flex flex-col md:flex-row gap-4 my-3 md:my-6">
+      <div className="flex flex-col md:flex-row gap-4 mt-6 md:mt-16">
         <a
           href="/Resume-2025.pdf"
           download="Yair-resume.pdf"
@@ -179,11 +179,11 @@ export default function Resume() {
         </a>
       </div>
 
-      <h3 className="text-2xl md:text-3xl  text-center font-bold bg-gradient-to-br from-[#007bff] to-[#6f42c1] text-transparent bg-clip-text">
+      <h3 className="text-2xl md:text-3xl  text-center font-bold bg-gradient-to-br from-[#007bff] to-[#6f42c1] text-transparent bg-clip-text mt-6 md:mt-16">
         Languages and Tools
       </h3>
 
-      <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-8 gap-6  my-3 lg:my-6">
+      <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-8 gap-6 mt-6 md:mt-16">
         {technologies.map((tech) => (
           <a key={tech.name} href={tech.url} target="_blank" rel="noreferrer">
             <img
@@ -195,11 +195,11 @@ export default function Resume() {
         ))}
       </div>
 
-      <h3 className="text-2xl md:text-3xl  text-center font-bold bg-gradient-to-br from-[#007bff] to-[#6f42c1] text-transparent bg-clip-text">
+      <h3 className="text-2xl md:text-3xl  text-center font-bold bg-gradient-to-br from-[#007bff] to-[#6f42c1] text-transparent bg-clip-text mt-6 md:mt-16">
         Certifications
       </h3>
 
-      <div className="w-full max-w-3xl bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-md my-3 md:my-6">
+      <div className="w-full max-w-3xl bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-md mt-6 md:mt-16">
         <ul className="space-y-6">
           {certificates.map((cert, index) => (
             <a href={cert.certificateURL} target="_blank">

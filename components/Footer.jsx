@@ -1,7 +1,7 @@
 import { Github, Linkedin, Mail, MessageCircle } from "lucide-react";
 export default function Footer({darkMode}) {
   return (
-    <footer className="h-16 border-t-2 border-[#163874] dark:border-[#5C92F0] flex flex-col items-center pb-8">
+    <footer className=" border-t-2 border-[#163874] dark:border-[#5C92F0] flex flex-col items-center mt-6 md:mt-16">
       <a href="/" className="h-16">
         <img
           src={darkMode ? "/assets/YairG-logo-dark-mode.png" : "/assets/YairG-logo.png"}
@@ -45,7 +45,7 @@ export default function Footer({darkMode}) {
         </a>
       </div>
 
-      <p className="text-sm text-gray-600 dark:text-gray-400 mt-4 mb-8">
+      <p className="text-sm text-gray-600 dark:text-gray-400 mt-4 mb-7">
         © {new Date().getFullYear()} Yair. All rights reserved.
       </p>
     </footer>

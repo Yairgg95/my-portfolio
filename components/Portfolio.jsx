@@ -56,7 +56,7 @@ export default function Portfolio() {
   return (
     <section
       id="portfolio"
-      className="h-full max-w-screen-2xl mx-auto flex flex-col items-center justify-center pt-6 md:pt-2 lg:mt-16"
+      className="h-full max-w-screen-2xl mx-auto flex flex-col items-center justify-center pt-20 md:pt-24 lg:pt-36"
     >
       <h2 className="text-3xl md:text-5xl  text-center font-bold bg-gradient-to-br from-[#007bff] to-[#6f42c1] text-transparent bg-clip-text">
         Portfolio

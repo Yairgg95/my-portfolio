@@ -6,14 +6,14 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="h-full max-w-screen-2xl mx-auto flex flex-col items-center justify-center pt-6 md:pt-2 lg:mt-16"
+      className="h-full max-w-screen-2xl mx-auto flex flex-col items-center justify-center pt-20 md:pt-24 lg:pt-36"
     >
       <h2 className="text-3xl md:text-5xl  text-center font-bold bg-gradient-to-br from-[#007bff] to-[#6f42c1] text-transparent bg-clip-text">
         Contact
       </h2>
 
-      <div className="flex flex-col md:flex-row my-3 md:my-6 space-y-6">
-        <div className="flex flex-col items-center md:items-start md:w-1/2 space-y-6 my-3">
+      <div className="flex flex-col lg:flex-row mt-8 md:mt-16">
+        <div className="flex flex-col items-center lg:items-start lg:w-1/2 space-y-6 my-3">
           <h3 className="text-lg md:text-xl lg:text-2xl font-semibold text-gray-900 dark:text-white flex items-center gap-2">
             <MessageCircle className="text-blue-500" /> Talk to me
           </h3>
@@ -37,7 +37,7 @@ export default function Contact() {
           </a>
         </div>
 
-        <div className="md:w-1/2 w-full bg-white dark:bg-gray-800 p-6 shadow-lg rounded-2xl">
+        <div className="lg:w-1/2 w-full bg-white dark:bg-gray-800 p-6 shadow-lg rounded-2xl mt-6 md:mt-16 lg:mt-0">
           <h3 className="text-lg md:text-xl lg:text-2xl font-semibold text-gray-900 dark:text-white flex items-center gap-2">
             <Send className="text-purple-500" /> Write me your project
           </h3>
