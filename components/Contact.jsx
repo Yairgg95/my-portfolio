@@ -1,13 +1,14 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import { showToast } from "./CustomToast";
 import {
   Mail,
   Send,
   MessageCircle,
-  CheckCircle,
-  MessageCircleX,
   Loader,
 } from "lucide-react";
+
+
 
 export default function Contact() {
   const {
@@ -17,12 +18,9 @@ export default function Contact() {
   } = useForm();
 
   const [isSending, setIsSending] = useState(false);
-  const [isSent, setIsSent] = useState(false);
-  const [error, setError] = useState(null);
 
   const onSubmit = async (data) => {
     setIsSending(true);
-    setError(null);
 
     try {
       const res = await fetch("https://www.yairggdev.lat/api/contact", {
@@ -31,17 +29,15 @@ export default function Contact() {
         body: JSON.stringify(data),
       });
 
-      if (res.ok) {
-        setIsSent(true);
+      if (!res.ok) {
+        throw new Error("Something went wrong. Please try again.");
       }
-    } catch (error) {
-      setIsSending(false);
-      setError(error.message);
 
-      setTimeout(() => {
-        setIsSending(false);
-        setIsSent(false);
-      }, 5000);
+      showToast("succes", "Thank you! Your message has been sent.");
+    } catch (error) {
+      showToast("error", error.message || "Failed to send message.");
+    } finally {
+      setIsSending(false);
     }
   };
 
@@ -162,16 +158,8 @@ export default function Contact() {
             >
               {isSending ? (
                 <div className="flex items-center gap-2">
-                  <Loader className="text-white" />
+                  <Loader className="animate-spin" />
                   Sending...
-                </div>
-              ) : isSent ? (
-                <div className="flex items-center gap-2">
-                  <CheckCircle className="text-green-500" /> Thank You!
-                </div>
-              ) : error ? (
-                <div className="flex items-center gap-2">
-                  <MessageCircleX className="text-red-500" /> {error}
                 </div>
               ) : (
                 <div className="flex items-center gap-2">
