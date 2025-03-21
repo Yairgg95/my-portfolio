@@ -1,8 +1,50 @@
-import { Mail, Send, MessageCircle } from "lucide-react";
-
-{/*TO DO fetch to send email */ }
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import {
+  Mail,
+  Send,
+  MessageCircle,
+  CheckCircle,
+  MessageCircleX,
+  Loader,
+} from "lucide-react";
 
 export default function Contact() {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+  const [isSending, setIsSending] = useState(false);
+  const [isSent, setIsSent] = useState(false);
+  const [error, setError] = useState(null);
+
+  const onSubmit = async (data) => {
+    setIsSending(true);
+    setError(null);
+
+    try {
+      const res = await fetch("https://www.yairggdev.lat/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      if (res.ok) {
+        setIsSent(true);
+      }
+    } catch (error) {
+      setIsSending(false);
+      setError(error.message);
+
+      setTimeout(() => {
+        setIsSending(false);
+        setIsSent(false);
+      }, 5000);
+    }
+  };
+
   return (
     <section
       id="contact"
@@ -41,23 +83,101 @@ export default function Contact() {
           <h3 className="text-lg md:text-xl lg:text-2xl font-semibold text-gray-900 dark:text-white flex items-center gap-2">
             <Send className="text-purple-500" /> Write me your project
           </h3>
-          <form className="flex flex-col gap-4 mt-4">
-            <input
-              type="text"
-              placeholder="Your Name"
-              className="p-3 border rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-800"
-            />
-            <input
-              type="email"
-              placeholder="Your Email"
-              className="p-3 border rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-800"
-            />
-            <textarea
-              placeholder="Tell me about your project..."
-              className="p-3 border rounded-lg w-full h-32 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-800"
-            />
-            <button type="button" className="mt-4 bg-blue-600 text-white p-3 rounded-lg flex items-center justify-center gap-2 hover:bg-blue-700 transition">
-              <Send /> Submit
+
+          <form
+            onSubmit={handleSubmit(onSubmit)}
+            className="flex flex-col gap-4 mt-4"
+          >
+            <div className="relative">
+              <label className="absolute left-3 top-1 text-gray-500 dark:text-white font-bold text-sm">
+                Name
+              </label>
+              <input
+                type="text"
+                placeholder="Your Name"
+                className="p-3 border rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-800 mt-6"
+                {...register("name", {
+                  required: "Name is required",
+                  maxLength: {
+                    value: 50,
+                    message: "Name must be less than 50 characters",
+                  },
+                })}
+              />
+            </div>
+            {errors.name && (
+              <span className="text-red-500 text-sm">
+                {errors.name.message}
+              </span>
+            )}
+
+            <div className="relative">
+              <label className="absolute left-3 top-1 text-gray-500 dark:text-white font-bold  text-sm">
+                Email
+              </label>
+              <input
+                type="email"
+                placeholder="Your Email"
+                className="p-3 border rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-800 mt-6"
+                {...register("email", {
+                  required: "Email is required",
+                  maxLength: {
+                    value: 100,
+                    message: "Email must be less than 100 characters",
+                  },
+                })}
+              />
+            </div>
+            {errors.email && (
+              <span className="text-red-500 text-sm">
+                {errors.email.message}
+              </span>
+            )}
+
+            <div className="relative">
+              <label className="absolute top-1 left-3 text-gray-500 dark:text-white font-bold  text-sm">
+                Message
+              </label>
+              <textarea
+                placeholder="Tell me about your project..."
+                className="p-3 border rounded-lg w-full h-32 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-800 mt-6"
+                {...register("message", {
+                  required: "Message is required",
+                  maxLength: {
+                    value: 500,
+                    message: "Message must be less than 500 characters",
+                  },
+                })}
+              />
+            </div>
+            {errors.message && (
+              <span className="text-red-500 text-sm">
+                {errors.message.message}
+              </span>
+            )}
+
+            <button
+              type="submit"
+              className="mt-4 bg-blue-600 text-white p-3 rounded-lg flex items-center justify-center gap-2 hover:bg-blue-700 transition"
+            >
+              {isSending ? (
+                <div className="flex items-center gap-2">
+                  <Loader className="text-white" />
+                  Sending...
+                </div>
+              ) : isSent ? (
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="text-green-500" /> Thank You!
+                </div>
+              ) : error ? (
+                <div className="flex items-center gap-2">
+                  <MessageCircleX className="text-red-500" /> {error}
+                </div>
+              ) : (
+                <div className="flex items-center gap-2">
+                  <Send /> Submit
+                </div>
+              )}
             </button>
           </form>
         </div>

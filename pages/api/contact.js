@@ -23,7 +23,7 @@ export default async function handler(req, res) {
 
     name = sanitizeInput(name,50);
     email =sanitizeInput(email,100);
-    message = sanitizeInput(message,100);
+    message = sanitizeInput(message,500);
 
     if (!name || !email || !message) {
       throw createError(
