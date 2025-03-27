@@ -9,7 +9,7 @@ const projects = [
       "App for quoting and purchasing auto parts, connecting customers with suppliers.",
     tags: ["Next.js", "React", "JavaScript", "Tailwind CSS", "Vercel"],
     image:
-      "https://media.licdn.com/dms/image/v2/D4D2DAQFbjqPb24YXtg/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1733890388663?e=1743055200&v=beta&t=7M8eLwbjkJtklVP3KMvQCtl6jSnlzOPfDcq9EYqvegI",
+      "/assets/FAIREFAC-Web.png",
     liveUrl: "https://fairefac.vercel.app",
     repoUrl: "https://github.com/Yairgg95/FAIREFAC-web",
     status: "Completed",
@@ -20,8 +20,8 @@ const projects = [
     description:
       "A backend system for managing automotive parts quotations, streamlining the connection between customers and suppliers.",
     tags: ["Node.js", "Express", "MongoDB", "JavaScript", "Stripe", "AWS"],
-    image:
-      "https://media.licdn.com/dms/image/v2/D4D2DAQFy_SnC1G3orw/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1733891420700?e=1743055200&v=beta&t=xTwDyut4P-elYK0jSR1YecGTTo5MjznAg50OWaZAyAI",
+    image: 
+    "/assets/FAIREFAC-API.png",
     liveUrl: "https://fairefac-api.onrender.com",
     repoUrl: "https://github.com/Yairgg95/FAIREFAC-API-V1",
     status: "Completed",
