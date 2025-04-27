@@ -110,6 +110,16 @@ export default function Resume() {
       url: "https://spring.io/projects/spring-boot",
       logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/spring/spring-original-wordmark.svg",
     },
+    {
+      name: "Gradle",
+      url: "https://gradle.org/",
+      logo: "https://www.vectorlogo.zone/logos/gradle/gradle-icon.svg",
+    },
+    {
+      name: "Docker",
+      url: "https://www.docker.com/",
+      logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg",
+    },
   ];
 
   const certificates = [
@@ -175,7 +185,7 @@ export default function Resume() {
           download="Yair-CV.pdf"
           className="px-6 py-2 bg-gray-700 text-white text-center rounded-lg hover:bg-gray-800 transition"
         >
-          Descargar CV (ES)
+          Download Resume (ES)
         </a>
       </div>
 
