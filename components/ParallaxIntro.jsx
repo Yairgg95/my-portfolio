@@ -24,7 +24,7 @@ export default function ParallaxIntro({ onFinish }) {
           if (prev < 3) {
             animationFrame = requestAnimationFrame(animate);
             setFade(1 - (prev - 1) / 2);
-            return prev + 0.005;
+            return prev + 0.02;
           } else {
             cancelAnimationFrame(animationFrame);
             document.body.style.overflow = "";
