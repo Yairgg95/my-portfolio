@@ -28,9 +28,7 @@ export default function Document() {
         />
         <meta property="og:url" content="https://www.yairggdev.lat" />
 
-
         <link rel="icon" href="/assets/YG-meta.png" />
-        <title>Yair Guadarrama | Full-Stack Developer & UI/UX Enthusiast</title>
       </Head>
       <body className="antialiased min-h-screen bg-[#E8EEF8] text-black dark:bg-black dark:text-white">
         <Main />
