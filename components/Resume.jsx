@@ -1,14 +1,9 @@
 export default function Resume() {
   const technologies = [
     {
-      name: "AWS",
-      url: "https://aws.amazon.com",
-      logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
-    },
-    {
-      name: "Bootstrap",
-      url: "https://getbootstrap.com",
-      logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg",
+      name: "HTML5",
+      url: "https://www.w3.org/html/",
+      logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg",
     },
     {
       name: "CSS3",
@@ -16,79 +11,20 @@ export default function Resume() {
       logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg",
     },
     {
-      name: "Express",
-      url: "https://expressjs.com",
-      logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg",
-    },
-    {
-      name: "Figma",
-      url: "https://www.figma.com/",
-      logo: "https://www.vectorlogo.zone/logos/figma/figma-icon.svg",
-    },
-    {
-      name: "Firebase",
-      url: "https://firebase.google.com/",
-      logo: "https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg",
-    },
-    {
-      name: "Google Cloud",
-      url: "https://cloud.google.com",
-      logo: "https://www.vectorlogo.zone/logos/google_cloud/google_cloud-icon.svg",
-    },
-    {
-      name: "Git",
-      url: "https://git-scm.com/",
-      logo: "https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg",
-    },
-    {
-      name: "GitHub",
-      url: "https://github.com",
-      logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg",
-    },
-    {
-      name: "HTML5",
-      url: "https://www.w3.org/html/",
-      logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg",
+      name: "Sass",
+      url: "https://sass-lang.com",
+      logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg",
     },
     {
       name: "JavaScript",
       url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
       logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg",
     },
+
     {
-      name: "Linux",
-      url: "https://www.linux.org/",
-      logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg",
-    },
-    {
-      name: "MongoDB",
-      url: "https://www.mongodb.com/",
-      logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg",
-    },
-    {
-      name: "Next.js",
-      url: "https://nextjs.org/",
-      logo: "https://cdn.worldvectorlogo.com/logos/nextjs-2.svg",
-    },
-    {
-      name: "Nginx",
-      url: "https://www.nginx.com",
-      logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/nginx/nginx-original.svg",
-    },
-    {
-      name: "Node.js",
-      url: "https://nodejs.org",
-      logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg",
-    },
-    {
-      name: "React",
-      url: "https://reactjs.org/",
-      logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg",
-    },
-    {
-      name: "Sass",
-      url: "https://sass-lang.com",
-      logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg",
+      name: "Bootstrap",
+      url: "https://getbootstrap.com",
+      logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg",
     },
     {
       name: "Tailwind CSS",
@@ -96,14 +32,40 @@ export default function Resume() {
       logo: "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg",
     },
     {
-      name: "Java",
-      url: "https://www.java.com/",
-      logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original-wordmark.svg",
+      name: "React",
+      url: "https://reactjs.org/",
+      logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg",
+    },
+    {
+      name: "Next.js",
+      url: "https://nextjs.org/",
+      logo: "https://cdn.worldvectorlogo.com/logos/nextjs-2.svg",
+    },
+
+    {
+      name: "Node.js",
+      url: "https://nodejs.org",
+      logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg",
+    },
+    {
+      name: "Express",
+      url: "https://expressjs.com",
+      logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg",
+    },
+    {
+      name: "MongoDB",
+      url: "https://www.mongodb.com/",
+      logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg",
     },
     {
       name: "MySQL",
       url: "https://www.mysql.com/",
       logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg",
+    },
+    {
+      name: "Java",
+      url: "https://www.java.com/",
+      logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original-wordmark.svg",
     },
     {
       name: "Spring Boot",
@@ -116,9 +78,55 @@ export default function Resume() {
       logo: "https://www.vectorlogo.zone/logos/gradle/gradle-icon.svg",
     },
     {
+      name: "Maven",
+      url: "https://maven.apache.org/",
+      logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/maven/maven-original-wordmark.svg",
+    },
+
+    {
       name: "Docker",
       url: "https://www.docker.com/",
       logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg",
+    },
+    {
+      name: "Nginx",
+      url: "https://www.nginx.com",
+      logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/nginx/nginx-original.svg",
+    },
+    {
+      name: "AWS",
+      url: "https://aws.amazon.com",
+      logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
+    },
+    {
+      name: "Google Cloud",
+      url: "https://cloud.google.com",
+      logo: "https://www.vectorlogo.zone/logos/google_cloud/google_cloud-icon.svg",
+    },
+    {
+      name: "Firebase",
+      url: "https://firebase.google.com/",
+      logo: "https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg",
+    },
+    {
+      name: "Git",
+      url: "https://git-scm.com/",
+      logo: "https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg",
+    },
+    {
+      name: "GitHub",
+      url: "https://github.com",
+      logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg",
+    },
+    {
+      name: "Linux",
+      url: "https://www.linux.org/",
+      logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg",
+    },
+    {
+      name: "Figma",
+      url: "https://www.figma.com/",
+      logo: "https://www.vectorlogo.zone/logos/figma/figma-icon.svg",
     },
   ];
 
