@@ -8,8 +8,7 @@ const projects = [
     description:
       "App for quoting and purchasing auto parts, connecting customers with suppliers.",
     tags: ["Next.js", "React", "JavaScript", "Tailwind CSS", "Vercel"],
-    image:
-      "/assets/FAIREFAC-Web.png",
+    image: "/assets/FAIREFAC-Web.png",
     liveUrl: "https://fairefac.vercel.app",
     repoUrl: "https://github.com/Yairgg95/FAIREFAC-web",
     status: "Completed",
@@ -20,8 +19,7 @@ const projects = [
     description:
       "A backend system for managing automotive parts quotations, streamlining the connection between customers and suppliers.",
     tags: ["Node.js", "Express", "MongoDB", "JavaScript", "Stripe", "AWS"],
-    image: 
-    "/assets/FAIREFAC-API.png",
+    image: "/assets/FAIREFAC-API.png",
     liveUrl: "https://fairefac-api.onrender.com",
     repoUrl: "https://github.com/Yairgg95/FAIREFAC-API-V1",
     status: "Completed",
@@ -30,25 +28,36 @@ const projects = [
     id: 3,
     title: "3D-Garden Web",
     description:
-      "App for a marketplace selling 3D-printed planters, currently in development.",
+      "A responsive web interface for browsing, selecting, and purchasing custom 3D-printed planters.",
     tags: ["HTML", "JavaScript", "Bootstrap", "CSS3"],
     image:
       "https://raw.githubusercontent.com/Yairgg95/3D-Garden-web/refs/heads/develop/assets/principal-img.png",
     liveUrl: "#",
     repoUrl: "https://github.com/Yairgg95/3D-Garden-web",
-    status: "In Progress",
+    status: "Completed",
   },
   {
     id: 4,
     title: "3D-Garden API",
     description:
-      "Backend for a marketplace managing inventory, order fulfillment, and the buying and selling of 3D-printed planters. Currently in the planning stage.",
-    tags: ["MySQL", "Java", "Spring Boot", "AWS"],
+      "Java backend service managing products, orders, users, and admin tools for a 3D-printed planters marketplace.",
+    tags: ["MySQL", "Java", "Spring Boot", "AWS", "Gradle"],
     image:
       "https://www.alvantia.com/wp-content/uploads/2018/05/imagen-spring-boot-ENGLISH.jpg",
     liveUrl: "#",
     repoUrl: "https://github.com/Yairgg95/3D-Garden-API",
-    status: "In Progress",
+    status: "Completed",
+  },
+  {
+    id: 5,
+    title: "Spiderman API",
+    description:
+      "Backend for managing multiverse characters with authentication, image uploads, data persistence, and error handling.",
+    tags: ["Java", "Spring Boot", "MySQL", "JWT", "AWS S3", "Docker", "Maven"],
+    image: "/assets/spiderman-api.png",
+    liveUrl: "#",
+    repoUrl: "https://github.com/Yairgg95/spiderman-api",
+    status: "Completed",
   },
 ];
 
